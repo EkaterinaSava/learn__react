@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <nav className="green darken-1">
+    <nav className="teal lighten-2">
       <div className="nav-wrapper">
         <a href="#!" className="brand-logo">React Tutorial Movies App</a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">

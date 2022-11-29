@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="page-footer green lighten-1">
+    <footer className="page-footer teal lighten-2">
     <div className="footer-copyright">
       <div className="container">
       © {new Date().getFullYear()} Copyright / Ekaterina Sava
