@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav-wrapper {
+  padding: 0 15px;
+}
+
+.page-main {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1rem 0;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 1rem;
+}
+
+.items .card .card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items .card .card-content {
+  min-height: 132px;
+}
+
+.page-footer .footer-copyright {
+  background-color: transparent;
+  padding-bottom: 30px;
+}

@@ -20,3 +20,8 @@
 #### Project 2
 
 Продолжение работы по курсу https://coursehunter.net/course/react-s-nulya-dlya-nachinayushchih-3-proekta-v-portfolio
+
+Второй проект - магазин товаров, запрашиваемых по API с https://fortniteapi.io/, в котором есть возможность добавлять товары в корзину, просматривать её, изменять внутри нее количество товаров, а также удалять их.
+
+Для стилизации также используется https://materializecss.com
+
