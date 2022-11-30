@@ -4,6 +4,8 @@ function CartList(props) {
     order = [],
     handleCartShow = Function.prototype,
     removeFromCart = Function.prototype,
+    increaseQuantity = Function.prototype,
+    decreaseQuantity = Function.prototype,
   } = props;
 
   const totalPrice = order.reduce((sum, item) => {
@@ -15,12 +17,23 @@ function CartList(props) {
       <div className="collection-item active">Cart:</div>
       {
         order.length ? order.map(item => (
-          <CartItem key={item.offerId} removeFromCart={removeFromCart} {...item} />
+          <CartItem
+            key={item.offerId}
+            removeFromCart={removeFromCart}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
+            {...item}
+          />
         )) : <div className="collection-item">Cart is empty.</div>
       }
       <div className="collection-item active cart-modal__total-price">
         <span>Total price:</span>
         <span>{totalPrice} $</span>
+      </div>
+      <div className="collection-item cart-modal__checkout">
+        <button className="btn btn-small">
+          Go to checkout
+        </button>
       </div>
       <i className="material-icons cart-modal__close" onClick={handleCartShow}>close</i>
     </div>
