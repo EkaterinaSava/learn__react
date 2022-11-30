@@ -37,7 +37,54 @@ code {
   min-height: 132px;
 }
 
+.items .card .card-price {
+  color: #00695c;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .page-footer .footer-copyright {
   background-color: transparent;
   padding-bottom: 30px;
+}
+
+.cart {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4db6ac;
+  margin: 1rem 0 1.5rem auto;
+  border-radius: 2px;
+  position: fixed;
+  top: 71px;
+  right: 12px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  transition: box-shadow 0.2s ease-out;
+}
+
+@media (max-width: 768px) {
+  .cart {
+    top: auto;
+    bottom: 12px;
+  }
+}
+
+.cart:hover {
+ box-shadow: 0 2px 2px 0 rgb(0 0 0 / 28%), 0 3px 1px -2px rgb(0 0 0 / 24%), 0 1px 5px 0 rgb(0 0 0 / 40%);
+}
+
+.cart .material-icons {
+  color: white;
+  font-size: 30px;
+  margin-right: 0.25rem;
+}
+
+.cart .cart-quantity {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }

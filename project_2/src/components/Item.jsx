@@ -18,7 +18,7 @@ function Item(props) {
       </div>
       <div className="card-action">
         <button className="btn">Add to cart</button>
-        <span className="right">{price.regularPrice}</span>
+        <span className="right card-price">{price.regularPrice} $</span>
       </div>
     </div>
   );
