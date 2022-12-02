@@ -7,13 +7,13 @@ function CartItem(props) {
     displayName,
     price,
     quantity,
-    removeFromCart = Function.prototype,
-    increaseQuantity = Function.prototype,
-    decreaseQuantity = Function.prototype,
   } = props;
 
-  const { example } = useContext(ShopContext);
-  console.log(example);
+  const {
+    removeFromCart,
+    increaseQuantity,
+    decreaseQuantity,
+   } = useContext(ShopContext);
 
   return (
     <div className="collection-item">

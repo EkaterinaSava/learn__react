@@ -1,6 +1,13 @@
 export function reducer(state, {type, payload}) {
   switch (type) {
 
+    case 'SET_SHOP_ITEMS':
+      return {
+        ...state,
+        items: payload || [],
+        loading: false,
+      }
+
     case 'ADD_TO_CART': {
       const itemIndex = state.order.findIndex(orderItem => {
         return orderItem.offerId === payload.offerId;

@@ -38,6 +38,10 @@ export const ContextProvider = ({ children}) => {
     dispatch({type: 'REMOVE_FROM_CART', payload: {offerId: itemId}});
   };
 
+  value.setShopItems = (data) => {
+    dispatch({type: 'SET_SHOP_ITEMS', payload: data});
+  };
+
   return (
     <ShopContext.Provider
       value={value}
