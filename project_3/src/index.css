@@ -44,3 +44,18 @@ code {
 .meal-list__card .card-content {
   flex-grow: 1;
 }
+
+.btn + .category-list,
+.btn + .meal-list {
+  margin-top: 1rem;
+}
+
+.recipe img,
+.recipe iframe {
+  max-width: 100%;
+}
+
+.recipe iframe {
+  width: 600px;
+  height: 345px;
+}

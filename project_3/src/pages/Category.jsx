@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { getFilteredCategory } from '../api';
 
 import { Preloader } from '../components/Preloader';
@@ -7,6 +7,8 @@ import { MealList } from '../components/MealList';
 
 function Category() {
   const { name } = useParams();
+  const { goBack } = useHistory();
+
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
@@ -17,6 +19,8 @@ function Category() {
 
   return (
     <>
+      <button className="btn" onClick={goBack}>⇽ Go Back</button>
+
       {!meals.length ? (
         <Preloader />
       ) : (
