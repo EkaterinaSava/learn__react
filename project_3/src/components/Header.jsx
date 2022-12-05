@@ -4,7 +4,7 @@ function Header() {
   return (
     <nav className="teal lighten-2">
       <div className="nav-wrapper">
-        <Link to="/" className="brand-logo">React Tutorial Shop App</Link>
+        <Link to="/" className="brand-logo">React Tutorial Menu App</Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <Link to="/about">About</Link>

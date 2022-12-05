@@ -25,3 +25,22 @@ code {
   background-color: transparent;
   padding-bottom: 30px;
 }
+
+.category-list,
+.meal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 1rem;
+}
+
+.category-list__card,
+.meal-list__card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.category-list__card .card-content,
+.meal-list__card .card-content {
+  flex-grow: 1;
+}
