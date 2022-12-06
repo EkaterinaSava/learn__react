@@ -1,8 +1,6 @@
 # learn__react
  
-#### Project 1
-
-##### Demo: https://react-tutorial-movies-2022.firebaseapp.com/
+### Project 1 / Demo: https://react-tutorial-movies-2022.firebaseapp.com/
 
 По курсу https://coursehunter.net/course/react-s-nulya-dlya-nachinayushchih-3-proekta-v-portfolio
 
@@ -19,9 +17,7 @@
 
 ---
 
-#### Project 2
-
-##### Demo: https://react-tutorial-shop-2022.firebaseapp.com
+### Project 2 / Demo: https://react-tutorial-shop-2022.firebaseapp.com
 
 Продолжение работы по курсу https://coursehunter.net/course/react-s-nulya-dlya-nachinayushchih-3-proekta-v-portfolio
 
@@ -33,10 +29,7 @@
 
 ---
 
-#### Project 3
-
-
-##### Demo: https://react-tutorial-menu-2022.firebaseapp.com
+#### Project 3 / Demo: https://react-tutorial-menu-2022.firebaseapp.com
 
 Продолжение работы по курсу https://coursehunter.net/course/react-s-nulya-dlya-nachinayushchih-3-proekta-v-portfolio
 
@@ -45,3 +38,10 @@
 Для стилизации также используется https://materializecss.com
 
 Для навигации и роутинга использован `react-router-dom`
+
+---
+
+Дополнительная ссылка на Udemy курс по которым сделаны первые 3 проекта (так как там есть более детальное описание пройденного материала): 
+https://www.udemy.com/course/react-from-scratch/
+
+---
