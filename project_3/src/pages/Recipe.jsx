@@ -16,8 +16,6 @@ function Recipe() {
     });
   }, [id]);
 
-  console.log(recipe)
-
   return (
     <>
       {!recipe.idMeal ? (

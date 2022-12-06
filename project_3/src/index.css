@@ -59,3 +59,22 @@ code {
   width: 600px;
   height: 345px;
 }
+
+.input-field {
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-field input.search-input {
+  flex: 1;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.input-field input[type=search].search-input:focus:not(.browser-default) {
+  border-bottom: 1px solid transparent;
+}
+
+.input-field button {
+  flex: 0;
+}
