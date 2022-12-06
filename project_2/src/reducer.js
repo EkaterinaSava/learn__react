@@ -9,9 +9,9 @@ export function reducer(state, {type, payload}) {
       }
 
     case 'ADD_TO_CART': {
-      const itemIndex = state.order.findIndex(orderItem => {
-        return orderItem.offerId === payload.offerId;
-      });
+      const itemIndex = state.order.findIndex(
+        (orderItem) => orderItem.offerId === payload.offerId
+      );
       let newOrder = null;
       if (itemIndex < 0) {
         const newItem = {
@@ -20,7 +20,7 @@ export function reducer(state, {type, payload}) {
         }
         newOrder = [...state.order, newItem];
       } else {
-        const newOrder = state.order.map((orderItem , index) => {
+        newOrder = state.order.map((orderItem , index) => {
           if (index === itemIndex) {
             return {
               ...orderItem,
@@ -30,19 +30,20 @@ export function reducer(state, {type, payload}) {
             return orderItem;
           }
         })
-        return {
-          ...state,
-          order: newOrder,
-          alertName: payload.displayName,
-        }
       }
+
+      return {
+        ...state,
+        order: newOrder,
+        alertName: payload.displayName,
+      };
     }
 
     case 'INCREASE_QUANTITY':
       return {
         ...state,
         order: state.order.map((el) => {
-          if (el.offerId === payload.itemId) {
+          if (el.offerId === payload.offerId) {
             const newQuantity = el.quantity + 1;
             return {
               ...el,
@@ -58,7 +59,7 @@ export function reducer(state, {type, payload}) {
       return {
         ...state,
         order: state.order.map((el) => {
-          if (el.offerId === payload.itemId) {
+          if (el.offerId === payload.offerId) {
             const newQuantity = el.quantity - 1;
             return {
               ...el,

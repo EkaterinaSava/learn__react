@@ -29,7 +29,8 @@ function Shop() {
       .then((data) => {
         setShopItems(data.shop);
       })
-  }, [setShopItems]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <main className="page-main">

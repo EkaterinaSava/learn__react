@@ -60,6 +60,10 @@ code {
   height: 345px;
 }
 
+.recipe + .btn {
+  margin-top: 1rem;
+}
+
 .input-field {
   display: flex;
   align-items: flex-end;
