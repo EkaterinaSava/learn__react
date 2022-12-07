@@ -1,5 +1,20 @@
 import { useState } from 'react';
 
+function useMergedState(initialState) {
+  const [state, setState] = useState(initialState);
+
+  const mergeState = (changes) => {
+    setState(prevState => {
+      return {
+        ...prevState,
+        ...changes,
+      };
+    });
+  };
+
+  return [state, mergeState];
+}
+
 function FormField(props) {
   const { name, label, value, onChange, type = 'text'} = props;
 
@@ -16,18 +31,16 @@ function FormField(props) {
   );
 }
 
-const DEFAULT_AGE = 21;
+const initialState = {
+  firstName: '',
+  lastName: '',
+  age: 21,
+};
 
 export default function FormExample() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [age, setAge] = useState(DEFAULT_AGE);
+  const [data, setData] = useMergedState(initialState);
 
-  const clearInputs = () => {
-    setFirstName('');
-    setLastName('');
-    setAge(DEFAULT_AGE);
-  }
+  const clearInputs = () => setData(initialState);
 
   return (
     <>
@@ -35,28 +48,28 @@ export default function FormExample() {
         <FormField
           name="firstName"
           label="First name"
-          value={firstName}
-          onChange={(newValue) => setFirstName(newValue)}
+          value={data.firstName}
+          onChange={(firstName) => setData({ firstName })}
         />
         <FormField
           name="lastName"
           label="Last name"
-          value={lastName}
-          onChange={(newValue) => setLastName(newValue)}
+          value={data.lastName}
+          onChange={(lastName) => setData({ lastName })}
         />
         <FormField
           name="age"
           label="Age"
-          value={age}
-          onChange={(newValue) => setAge(newValue ? parseInt(newValue) : 0)}
+          value={data.age}
+          onChange={(age) => setData({ age: age ? parseInt(age) : '' })}
           type="number"
         />
       </form>
       <button className="form-example__button" onClick={clearInputs}>Clear all inputs</button>
       <div className="form-example__values">
-        <span>First name: {firstName || '-'}</span>
-        <span>Last name: {lastName || '-'}</span>
-        <span>Age: {age || '-'}</span>
+        <span>First name: {data.firstName || '-'}</span>
+        <span>Last name: {data.lastName || '-'}</span>
+        <span>Age: {data.age || '-'}</span>
       </div>
     </>
   );
