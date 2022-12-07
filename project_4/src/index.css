@@ -28,8 +28,11 @@ code {
   width: 100%;
   text-align: center;
   padding-top: 32px;
-  border-bottom: 2px solid rgba(0,150,136,0.8);
   padding-bottom: 32px;
+}
+
+#root .component:not(:last-child) {
+  border-bottom: 2px solid rgba(0,150,136,0.8);
 }
 
 #root .component__heading {
@@ -39,19 +42,19 @@ code {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
 }
 
-/* -------------------------------------------------------------------------------- */
-
-.clicker {
+#root .component > div {
   width: 100%;
 }
 
-.clicker button {
-  padding: 8px 16px;
+#root .component button,
+#root .component input {
+  padding: 4px 8px;
 }
 
-.clicker button + button {
+#root .component button + button {
   margin-left: 8px;
 }
+
 
 /* -------------------------------------------------------------------------------- */
 
@@ -87,5 +90,14 @@ code {
 .form-example__values span {
   margin-bottom: 8px;
 }
+
+/* -------------------------------------------------------------------------------- */
+
+.table-heavy {
+  margin: 16px auto 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+
 
 /* -------------------------------------------------------------------------------- */
