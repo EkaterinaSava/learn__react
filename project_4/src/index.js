@@ -5,6 +5,7 @@ import Clicker from './case1';
 import FormExample from './case2';
 import ExampleCounters from './case3';
 import Table from './case4';
+import Calculator from './case5';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,6 +30,11 @@ root.render(
     <div className="component">
       <h3 className="component__heading">Example #4: Table with heavy re-render</h3>
       <Table />
+    </div>
+
+    <div className="component">
+      <h3 className="component__heading">Example #5: Calculator (with functions in useState)</h3>
+      <Calculator />
     </div>
 
   </React.StrictMode>
