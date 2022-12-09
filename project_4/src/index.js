@@ -6,6 +6,7 @@ import FormExample from './case2';
 import ExampleCounters from './case3';
 import Table from './case4';
 import Calculator from './case5';
+import EffectCounter from './case6';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -35,6 +36,11 @@ root.render(
     <div className="component">
       <h3 className="component__heading">Example #5: Calculator (with functions in useState)</h3>
       <Calculator />
+    </div>
+
+    <div className="component">
+      <h3 className="component__heading">Example #6: Counter with useEffect</h3>
+      <EffectCounter />
     </div>
 
   </React.StrictMode>
