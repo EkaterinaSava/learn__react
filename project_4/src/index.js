@@ -7,6 +7,7 @@ import ExampleCounters from './case3';
 import Table from './case4';
 import Calculator from './case5';
 import EffectCounter from './case6';
+import MoveRedSquare from './case7';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -41,6 +42,11 @@ root.render(
     <div className="component">
       <h3 className="component__heading">Example #6: Counter with useEffect</h3>
       <EffectCounter />
+    </div>
+
+    <div className="component">
+      <h3 className="component__heading">Example #7: Use keyboard arrows for move Red Square</h3>
+      <MoveRedSquare />
     </div>
 
   </React.StrictMode>
