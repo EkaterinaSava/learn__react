@@ -1,0 +1,74 @@
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.master-left {
+  width: 25%;
+  padding: 24px;
+  background-color: rgba(127,255,212,0.2);
+  border-right: 2px solid rgba(0,150,136,0.8);
+  overflow-y: auto;
+}
+
+.master-right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.master-button {
+  background-color: #fff;
+  border: #bbbbbb solid 2px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 3px 3px #eeeeee;
+  text-align: start;
+  cursor: pointer;
+}
+.master-button:hover {
+  text-shadow: 2px 2px #eadff9;
+  box-shadow: 3px 3px #e1ccffbb;
+}
+.master-button:focus {
+  outline: 0;
+}
+
+.selected {
+  font-weight: 600;
+  border-color: rgba(0,150,136,0.8);;
+  box-shadow: 3px 3px rgba(0,150,136,0.2);;
+}
+
+.detail {
+  flex: 1;
+  padding: 24px;
+  position: relative;
+  overflow: scroll;
+}
+
+.detail button,
+.detail input {
+  padding: 4px 8px;
+}
+
+.detail button + button {
+  margin-left: 8px;
+}
+
+.bottom {
+  height: 35%;
+  background-color: rgba(127,255,212,0.2);
+  border-top: 2px solid rgba(0,150,136,0.8);
+  padding: 24px;
+  overflow: auto;
+}

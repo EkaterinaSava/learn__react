@@ -16,46 +16,7 @@ code {
 
 #root {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: rgba(127,255,212,0.2);
-  padding: 8px 80px;
 }
-
-#root .component {
-  width: 100%;
-  text-align: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  position: relative;
-}
-
-#root .component:not(:last-child) {
-  border-bottom: 2px solid rgba(0,150,136,0.8);
-}
-
-#root .component__heading {
-  width: 100%;
-  text-align: center;
-  color: rgba(0,150,136,0.8);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
-}
-
-#root .component > div {
-  width: 100%;
-}
-
-#root .component button,
-#root .component input {
-  padding: 4px 8px;
-}
-
-#root .component button + button {
-  margin-left: 8px;
-}
-
 
 /* -------------------------------------------------------------------------------- */
 
@@ -68,7 +29,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .form-example label {
@@ -78,7 +39,9 @@ code {
 }
 
 .form-example__button {
-  margin-bottom: 8px;
+  display: block;
+  width: 200px;
+  margin: 0 auto 8px;
 }
 
 .form-example__values {
@@ -105,7 +68,24 @@ code {
 }
 
 .calculator p > span {
+  display: inline-block;
+  min-width: 32px;
+  text-align: center;
   font-weight: bold;
+  margin: 0 4px;
 }
+
+/* -------------------------------------------------------------------------------- */
+
+.ref-example button {
+  margin-left: 8px;
+}
+
+.ref-example input:focus {
+  box-shadow: inset 0 0 8px 0 #f44336;
+}
+
+/* -------------------------------------------------------------------------------- */
+
 
 /* -------------------------------------------------------------------------------- */

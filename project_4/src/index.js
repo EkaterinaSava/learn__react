@@ -1,53 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Clicker from './case1';
-import FormExample from './case2';
-import ExampleCounters from './case3';
-import Table from './case4';
-import Calculator from './case5';
-import EffectCounter from './case6';
-import MoveRedSquare from './case7';
+
+import { MasterCase } from './MasterCase/MasterCase';
+import { Clicker as Case1} from './case1';
+import { FormExample as Case2 } from './case2';
+import { ExampleCounters as Case3 } from './case3';
+import { Table as Case4 } from './case4';
+import { Calculator as Case5 } from './case5';
+import { EffectCounter as Case6 } from './case6';
+import { MoveRedSquare as Case7 } from './case7';
+import { RefExample as Case8a } from './case8';
+import { RefEffect as Case8b } from './case8';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const content = {
+  cs_1: { name: 'Case 1', component: Case1 },
+  cs_2: { name: 'Case 2', component: Case2 },
+  cs_3: { name: 'Case 3', component: Case3 },
+  cs_4: { name: 'Case 4', component: Case4 },
+  cs_5: { name: 'Case 5', component: Case5 },
+  cs_6: { name: 'Case 6', component: Case6 },
+  cs_7: { name: 'Case 7', component: Case7 },
+  cs_8a: { name: 'Case 8a', component: Case8a },
+  cs_8b: { name: 'Case 8b', component: Case8b },
+};
+
 root.render(
   <React.StrictMode>
-
-    <div className="component">
-      <h3 className="component__heading">Example #1: Clicker</h3>
-      <Clicker />
-    </div>
-
-    <div className="component">
-      <h3 className="component__heading">Example #2: Form with state</h3>
-      <FormExample />
-    </div>
-
-    <div className="component">
-      <h3 className="component__heading">Example #3: Counters with Custom Hooks</h3>
-      <ExampleCounters />
-    </div>
-
-    <div className="component">
-      <h3 className="component__heading">Example #4: Table with heavy re-render</h3>
-      <Table />
-    </div>
-
-    <div className="component">
-      <h3 className="component__heading">Example #5: Calculator (with functions in useState)</h3>
-      <Calculator />
-    </div>
-
-    <div className="component">
-      <h3 className="component__heading">Example #6: Counter with useEffect</h3>
-      <EffectCounter />
-    </div>
-
-    <div className="component">
-      <h3 className="component__heading">Example #7: Use keyboard arrows for move Red Square</h3>
-      <MoveRedSquare />
-    </div>
-
+    <MasterCase content={content} />
   </React.StrictMode>
 );

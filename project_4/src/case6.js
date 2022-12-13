@@ -12,7 +12,7 @@ function updateClicksCount(clicksCount) {
   });
 }
 
-export default function EffectCounter() {
+export function EffectCounter() {
   const [count, increment] = useCounter(0, 1);
   
   useEffect(() => {

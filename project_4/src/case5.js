@@ -12,7 +12,7 @@ const onChange = (setter) => {
   }
 };
 
-export default function Calculator() {
+export function Calculator() {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
   const [action, setAction] = useState(() => add);

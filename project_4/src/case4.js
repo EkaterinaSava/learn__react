@@ -46,7 +46,7 @@ function HeaderRow({ maxPow }) {
 const MAX_NUMBER = 11;
 const MAX_POW = 5;
 
-export default function Table() {
+export function Table() {
   const [data, setData] = useState(() => {
     console.log('useState heavy table init');
     return someHeavyFunc(MAX_NUMBER, MAX_POW);

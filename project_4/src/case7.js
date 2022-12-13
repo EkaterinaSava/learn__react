@@ -36,13 +36,13 @@ function useCharacterPosition(step) {
 const initialStyle ={
   backgroundColor: 'red',
   position: 'absolute',
-  width: 50,
-  height: 50,
+  width: 45,
+  height: 45,
   left: 0,
   top: 0,
 };
 
-export default function MoveRedSquare() {
+export function MoveRedSquare() {
   const [left, top] = useCharacterPosition(50);
   const [style, setStyle] = useState(initialStyle);
 
@@ -58,6 +58,7 @@ export default function MoveRedSquare() {
  
   return (
     <>
+      <p>Use keyboard arrows for move Red Square</p>
       <h3>Square position: [{left}, {top}]</h3>
       <div
         style={style}

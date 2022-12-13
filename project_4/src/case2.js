@@ -37,7 +37,7 @@ const initialState = {
   age: 21,
 };
 
-export default function FormExample() {
+export function FormExample() {
   const [data, setData] = useMergedState(initialState);
 
   const clearInputs = () => setData(initialState);

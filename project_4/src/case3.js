@@ -39,7 +39,7 @@ function DecadesCounter({ initialValue }) {
   )
 }
 
-export default function ExampleCounters() {
+export function ExampleCounters() {
   return (
     <div>
       <YearCounter initialValue={1970} />
