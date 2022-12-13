@@ -12,6 +12,7 @@ import { EffectCounter as Case6 } from './case6';
 import { MoveRedSquare as Case7 } from './case7';
 import { RefExample as Case8a } from './case8';
 import { RefEffect as Case8b } from './case8';
+import { PinCode as Case9 } from './case9';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,6 +26,7 @@ const content = {
   cs_7: { name: 'Case 7', component: Case7 },
   cs_8a: { name: 'Case 8a', component: Case8a },
   cs_8b: { name: 'Case 8b', component: Case8b },
+  cs_9: { name: 'Case 9', component: Case9 },
 };
 
 root.render(
