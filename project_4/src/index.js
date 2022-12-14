@@ -14,6 +14,7 @@ import { RefExample as Case8a } from './case8';
 import { RefEffect as Case8b } from './case8';
 import { PinCode as Case9 } from './case9';
 import { LoggedRender as Case10 } from './case10';
+import { CallbackExample as Case11 } from './case11';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,6 +30,7 @@ const content = {
   cs_8b: { name: 'Case 8b', component: Case8b },
   cs_9: { name: 'Case 9', component: Case9 },
   cs_10: { name: 'Case 10', component: Case10 },
+  cs_11: { name: 'Case 11', component: Case11 },
 };
 
 root.render(
