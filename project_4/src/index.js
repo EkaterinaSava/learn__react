@@ -16,6 +16,7 @@ import { PinCode as Case9 } from './case9';
 import { LoggedRender as Case10 } from './case10';
 import { CallbackExample as Case11 } from './case11';
 import { RenderRecursiveChilds as Case12 } from './case12';
+import { ContextExample as Case13 } from './case13';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -33,6 +34,7 @@ const content = {
   cs_10: { name: 'Case 10', component: Case10 },
   cs_11: { name: 'Case 11', component: Case11 },
   cs_12: { name: 'Case 12', component: Case12 },
+  cs_13: { name: 'Case 13', component: Case13 },
 };
 
 root.render(

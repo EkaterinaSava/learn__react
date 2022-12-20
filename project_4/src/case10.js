@@ -1,5 +1,5 @@
 import { useState, useRef, forwardRef } from 'react';
-import PinInput from './PinInput/PinInput';
+import PinInput from './components/PinInput';
 
 function logRender(WrappedComponent) {
   return forwardRef(function(props, ref) {

@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import PinInput from './PinInput/PinInput';
+import PinInput from './components/PinInput';
 
 const initialDigits = ['', '', '', ''];
 
