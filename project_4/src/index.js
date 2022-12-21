@@ -17,6 +17,8 @@ import { LoggedRender as Case10 } from './case10';
 import { CallbackExample as Case11 } from './case11';
 import { RenderRecursiveChilds as Case12 } from './case12';
 import { ContextExample as Case13 } from './case13';
+import { ReducerExample as Case14a } from './case14';
+import { ContactsBook as Case14b } from './components/Case14/ContactsBook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -35,6 +37,8 @@ const content = {
   cs_11: { name: 'Case 11', component: Case11 },
   cs_12: { name: 'Case 12', component: Case12 },
   cs_13: { name: 'Case 13', component: Case13 },
+  cs_14a: { name: 'Case 14a', component: Case14a },
+  cs_14b: { name: 'Case 14b', component: Case14b },
 };
 
 root.render(
