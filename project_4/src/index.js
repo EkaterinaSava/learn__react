@@ -20,6 +20,7 @@ import { ContextExample as Case13 } from './case13';
 import { ReducerExample as Case14a } from './case14';
 import { ContactsBook as Case14b } from './components/Case14/ContactsBook';
 import { DebugValueExample as Case15 } from './case15';
+import { HooksFactory as Case16 } from './case16';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -41,6 +42,7 @@ const content = {
   cs_14a: { name: 'Case 14a', component: Case14a },
   cs_14b: { name: 'Case 14b', component: Case14b },
   cs_15:  { name: 'Case 15', component: Case15 },
+  cs_16:  { name: 'Case 16', component: Case16 },
 };
 
 root.render(

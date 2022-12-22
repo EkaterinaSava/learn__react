@@ -51,3 +51,15 @@ https://www.udemy.com/course/react-from-scratch/_
 ### Project 4 / Demo:
 
 Четвертый проект сделан по курсу https://coursehunter.net/course/react-hooks-v-detalyah и посвящен детальной работе с хуками.
+
+В рамках курса подробно рассмотрены такие хуки как
+- useState
+- useEffect & useLayoutEffect
+- useImperativeHandle
+- useCallback
+- useMemo
+- useContext
+- useReducer
+- useDebigValue
+
+Мной были пройдены лекции с 1 по 18, лекции с 19 и до конца (до 49) я оставила на будущее, так как материал под конец стал казаться уже порядочно сложным, а следующие в дальнейших уроках хуки - редко используемыми, поэтому я решила вернуться к изучению и закрепленю более базовых вещей.
