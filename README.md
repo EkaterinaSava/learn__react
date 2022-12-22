@@ -48,9 +48,9 @@ https://www.udemy.com/course/react-from-scratch/_
 
 ---
 
-### Project 4 / Demo:
+### Project 4 / Demo: https://react-tutorial-hooks-2022.firebaseapp.com
 
-Четвертый проект сделан по курсу https://coursehunter.net/course/react-hooks-v-detalyah и посвящен детальной работе с хуками.
+`Четвертый проект сделан по курсу https://coursehunter.net/course/react-hooks-v-detalyah и посвящен детальной работе с хуками.`
 
 В рамках курса подробно рассмотрены такие хуки как
 - useState
