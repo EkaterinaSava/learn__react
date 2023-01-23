@@ -23,9 +23,13 @@ const costs = [
 ];
 
 const App = () => {
+  const addCostHandler = (cost) => {
+    console.log(cost);
+  };
+
   return (
     <div className="wrapper">
-      <NewCost />
+      <NewCost onAddCost={addCostHandler} />
       <Costs costs={costs}/>
     </div>
   );
