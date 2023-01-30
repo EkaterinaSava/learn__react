@@ -1,30 +1,35 @@
+import { useState } from 'react';
 import Costs from './components/Costs/Costs';
 import NewCost from './components/NewCost/NewCost';
 
-const costs = [
+const INITIAL_COSTS = [
   {
     id: "c1",
     date: new Date(2021, 2, 12),
-    description: "Холодильник",
+    name: "Холодильник",
     price: 999.99,
   },
   {
     id: "c2",
     date: new Date(2022, 11, 25),
-    description: "MacBook",
+    name: "MacBook",
     price: 1254.72,
   },
   {
     id: "c3",
     date: new Date(2022, 3, 1),
-    description: "Джинсы",
+    name: "Джинсы",
     price: 49.99,
   },
 ];
 
 const App = () => {
+  const [costs, setCosts] = useState(INITIAL_COSTS);
+
   const addCostHandler = (cost) => {
-    console.log(cost);
+    setCosts(prevCosts => {
+      return [cost, ...prevCosts];
+    });
   };
 
   return (
