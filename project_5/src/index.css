@@ -243,7 +243,7 @@ code {
 }
 
 .diagram-bar__fill {
-  background-color: #bd8025;
+  background-color: rgba(0,150,136,0.75);
   width: 100%;
   transition: all 0.3s ease-out;
 }
