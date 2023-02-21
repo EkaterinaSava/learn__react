@@ -50,7 +50,7 @@ https://www.udemy.com/course/react-from-scratch/_
 
 ### Project 4 / Demo: https://react-tutorial-hooks-2022.firebaseapp.com
 
-`Четвертый проект сделан по курсу https://coursehunter.net/course/react-hooks-v-detalyah и посвящен детальной работе с хуками.`
+`Четвертый проект сделан по курсу` https://coursehunter.net/course/react-hooks-v-detalyah и посвящен детальной работе с хуками.
 
 В рамках курса подробно рассмотрены такие хуки как
 - useState
@@ -67,7 +67,9 @@ https://www.udemy.com/course/react-from-scratch/_
 
 ---
 
-### Project 5 / Demo: 
+### Project 5 / Demo: https://react-tutorial-expense-2023.firebaseapp.com
 
-`Пятый проект сделан по курсу "Современный React с Нуля" https://coursehunter.net/course/sovremennyy-react-s-nulya`
+`Пятый проект сделан по курсу "Современный React с Нуля"` https://coursehunter.net/course/sovremennyy-react-s-nulya
+
+По урокам с 1 по 59 - разработка приложения по учету расходов с возможностью добавления нового расхода через форму, отображением диаграммы с расходами по месяцам и возможностью фильтрации расходов по году.
 
