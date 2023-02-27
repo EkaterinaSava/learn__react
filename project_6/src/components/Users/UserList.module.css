@@ -15,3 +15,12 @@
 .user + .user {
   margin-top: 24px;
 }
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00358b;
+  text-align: center;
+  font-weight: 500;
+}
