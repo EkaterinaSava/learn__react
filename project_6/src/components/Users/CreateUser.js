@@ -53,6 +53,7 @@ const CreateUser = (props) => {
           <div className={styles.input}>
             <label htmlFor="name">Name</label>
             <input
+              placeholder="Enter user name"
               id="name"
               type="text"
               ref={nameInputRef}
@@ -61,6 +62,7 @@ const CreateUser = (props) => {
           <div className={styles.input}>
             <label htmlFor="age">Age</label>
             <input
+              placeholder="Enter user age"
               id="age"
               type="number"
               ref={ageInputRef}

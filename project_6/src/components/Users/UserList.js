@@ -3,9 +3,6 @@ import Card from "../UI/Card";
 import styles from './UserList.module.css';
 
 const UserList = (props) => {
-
-  console.log(props.users.length);
-
   return (
     <Card>
       {props.users.length ? (
