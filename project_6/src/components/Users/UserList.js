@@ -19,7 +19,7 @@ const UserList = (props) => {
       ) : (
         <p className={styles.empty}>
           <span>No Users here</span>
-          <span>Add new Users via the Form</span>
+          <span>Add new Users via Form</span>
         </p>
       )}
     </Card>
