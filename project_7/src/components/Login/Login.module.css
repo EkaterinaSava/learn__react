@@ -11,24 +11,20 @@
 .control {
   margin: 1rem 0;
   display: flex;
-  align-items: stretch;
-  flex-direction: column;
-}
-
-.control label,
-.control input {
-  display: block;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .control label {
+  width: 92px;
   font-weight: bold;
   flex: 1;
   color: #222222;
-  margin-bottom: 1rem;
+  margin-right: 8px;
 }
 
 .control input {
-  flex: 3;
+  width: calc(100% - 100px);
   font: inherit;
   padding: 0.4rem 0.4rem;
   border-radius: 7px;
@@ -43,16 +39,23 @@
 
 .control.invalid input {
   border-color: red;
-  background: #dfc1c1;
+  background: #fff1f1;
+}
+
+.error-show,
+.error-hide {
+  width: 100%;
+  color: red;
+  padding-left: 100px;
+}
+
+.error-show {
+  display: block;
+}
+.error-hide {
+  display: none;
 }
 
 .actions {
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .control {
-    align-items: center;
-    flex-direction: row;
-  }
 }
