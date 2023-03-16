@@ -129,7 +129,7 @@ const Login = () => {
         />
         <div className={styles.actions}>
           <Button type="submit" className={styles.btn}>
-            Вход
+            Log in
           </Button>
         </div>
       </form>
