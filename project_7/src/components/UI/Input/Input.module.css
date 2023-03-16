@@ -1,0 +1,33 @@
+.control {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.control label {
+  width: 92px;
+  font-weight: bold;
+  flex: 1;
+  color: #222222;
+  margin-right: 8px;
+}
+
+.control input {
+  width: calc(100% - 100px);
+  font: inherit;
+  padding: 0.4rem 0.4rem;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+}
+
+.control input:focus {
+  outline: none;
+  border-color: #0649a0;
+  background: #94bcf0;
+}
+
+.control.invalid input {
+  border-color: red;
+  background: #fff1f1;
+}

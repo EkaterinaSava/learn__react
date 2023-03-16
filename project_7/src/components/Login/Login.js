@@ -1,7 +1,9 @@
-import { useEffect, useState, useReducer } from 'react';
+import { useContext, useEffect, useState, useReducer, useRef } from 'react';
+import Button from '../UI/Button/Button';
+import Input from '../UI/Input/Input';
+import AuthContext from '../../store/auth-context';
 
 import styles from './Login.module.css';
-import Button from '../UI/Button';
 
 const emailReducer = (prevState, action) => {
   if (action.type === 'USER_INPUT') {
@@ -45,7 +47,7 @@ const passwordReducer = (prevState, action) => {
   };
 };
 
-const Login = (props) => {
+const Login = () => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmailState] = useReducer(emailReducer, {
@@ -60,6 +62,11 @@ const Login = (props) => {
   const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
 
+  const context = useContext(AuthContext);
+
+  const emailInputRef = useRef();
+  const passwordInputRef = useRef();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setFormIsValid(emailIsValid && passwordIsValid);
@@ -71,65 +78,57 @@ const Login = (props) => {
   }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
-    dispatchEmailState({type: 'USER_INPUT', value: event.target.value});
+    dispatchEmailState({ type: 'USER_INPUT', value: event.target.value });
   };
 
   const passwordChangeHandler = (event) => {
-    dispatchPasswordState({type: 'USER_INPUT', value: event.target.value});
+    dispatchPasswordState({ type: 'USER_INPUT', value: event.target.value });
   };
 
   const validateEmailHandler = () => {
-    dispatchEmailState({type: 'INPUT_BLUR'});
+    dispatchEmailState({ type: 'INPUT_BLUR' });
   };
 
   const validatePasswordHandler = () => {
-    dispatchPasswordState({type: 'INPUT_BLUR'});
+    dispatchPasswordState({ type: 'INPUT_BLUR' });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailState.value, passwordState.value);
+    if (formIsValid) {
+      context.onLogin(emailState.value, passwordState.value);
+    } else if (!emailIsValid) {
+      emailInputRef.current.focus();
+    } else {
+      passwordInputRef.current.focus();
+    }
   };
 
   return (
     <div className={styles.login}>
       <form onSubmit={submitHandler}>
-        <div
-          className={`${styles.control} ${
-            emailState.isValid === false ? styles.invalid : ""
-          }`}
-        >
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={emailState.value}
-            onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
-          />
-          <div className={emailState.isValid === false ? styles['error-show'] : styles['error-hide']}>
-            This field cannot be empty
-          </div>
-        </div>
-        <div
-          className={`${styles.control} ${
-            passwordState.isValid === false ? styles.invalid : ""
-          }`}
-        >
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={passwordState.value}
-            onChange={passwordChangeHandler}
-            onBlur={validatePasswordHandler}
-          />
-          <div className={passwordState.isValid === false ? styles['error-show'] : styles['error-hide']}>
-            This field cannot be empty
-          </div>
-        </div>
+        <Input
+          id="email"
+          label="E-mail"
+          type="email"
+          value={emailState.value}
+          isValid={emailIsValid}
+          onChange={emailChangeHandler}
+          onBlur={validateEmailHandler}
+          ref={emailInputRef}
+        />
+        <Input
+          id="password"
+          label="Password"
+          type="password"
+          value={passwordState.value}
+          isValid={passwordIsValid}
+          onChange={passwordChangeHandler}
+          onBlur={validatePasswordHandler}
+          ref={passwordInputRef}
+        />
         <div className={styles.actions}>
-          <Button type="submit" className={styles.btn} disabled={!formIsValid}>
+          <Button type="submit" className={styles.btn}>
             Вход
           </Button>
         </div>
