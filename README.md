@@ -83,8 +83,18 @@ https://www.udemy.com/course/react-from-scratch/_
 
 ---
 
-### Project 7 / Demo: -
+### Project 7 / Demo: без демо (очень маленькое приложение почти без визуала)
 
 `Седьмой проект также сделан по курсу "Современный React с Нуля"` https://coursehunter.net/course/sovremennyy-react-s-nulya
 
-По урокам с 88 до .
+По урокам с 88 до 105 - создание формы авторизации. Более подробно рассмотрены такие зуки как useEffect и useRefs, изучены хуки useReducer и useContext.
+
+---
+
+### Project 8 / Demo: -
+
+`Восьмой проект также сделан по курсу "Современный React с Нуля"` https://coursehunter.net/course/sovremennyy-react-s-nulya
+
+По урокам с 105 до
+
+---
